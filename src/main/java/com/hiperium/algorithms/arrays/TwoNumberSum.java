@@ -15,7 +15,6 @@ public final class TwoNumberSum {
 
     // O(n) time | O(n) space
     public static int[] solution2(Integer[] array, int targetSum) {
-        System.out.println("solution2 array: " + Arrays.toString(array) + " - target sum: " + targetSum);
         Set<Integer> nums = new HashSet<>();
         for (int num : array) {
             int potentialMatch = targetSum - num;
@@ -30,7 +29,6 @@ public final class TwoNumberSum {
     // O(nlog(n)) time | O(1) space
     public static int[] solution3(Integer[] array, int targetSum) {
         Arrays.sort(array);
-        System.out.println("solution3 sorted array: " + Arrays.toString(array) + " - target sum: " + targetSum);
         int left = 0;
         int right = array.length - 1;
         int[] result = new int[2];

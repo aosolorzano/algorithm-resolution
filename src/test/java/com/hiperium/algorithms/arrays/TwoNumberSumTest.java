@@ -18,6 +18,7 @@ class TwoNumberSumTest {
             "[1, 2, 3, 4, 5, 6, 7, 8, 9]: 17: 8: 9"
     }, delimiter = ':')
     void mustSumTwoNumber_solution2(@IntegerArrayConverter Integer[] array, int targetSum, int respNum1, int respNum2) {
+        System.out.println("solution2 array: " + Arrays.toString(array) + " - target sum: " + targetSum);
         int[] result = TwoNumberSum.solution2(array, targetSum);
         Assertions.assertEquals(2, result.length);
         Assertions.assertTrue(contains(result, respNum1));
@@ -33,6 +34,7 @@ class TwoNumberSumTest {
             "[1, 2, 3, 4, 5, 6, 7, 8, 9]: 17: 8: 9"
     }, delimiter = ':')
     void mustSumTwoNumber_solution3(@IntegerArrayConverter Integer[] array, int targetSum, int respNum1, int respNum2) {
+        System.out.println("solution3 array: " + Arrays.toString(array) + " - target sum: " + targetSum);
         int[] result = TwoNumberSum.solution3(array, targetSum);
         Assertions.assertEquals(2, result.length);
         Assertions.assertTrue(contains(result, respNum1));
