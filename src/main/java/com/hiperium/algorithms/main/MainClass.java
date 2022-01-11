@@ -1,6 +1,10 @@
 package com.hiperium.algorithms.main;
 
+import com.hiperium.algorithms.arrays.SortedSquaredArray;
 import com.hiperium.algorithms.arrays.TwoNumberSum;
+import com.hiperium.algorithms.arrays.ValidateSubsequence;
+
+import java.util.Arrays;
 
 /**
  * ALGORITHM ANALYSIS: is a study to provides theoretical estimation for the required resources of an algorithm
@@ -45,11 +49,29 @@ public class MainClass {
 
     public static void main(String[] args) {
         twoNumberSum();
+        validateSubsequence();
+        sortedSquaredArray();
     }
 
     private static void twoNumberSum() {
         System.out.println("*** TWO NUMBER SUM ***");
         TwoNumberSum.solution2(new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9}, 19);
         TwoNumberSum.solution3(new Integer[] {3, 5, -4, 8, 11, 1, -1, 6}, 10);
+    }
+
+    private static void validateSubsequence() {
+        System.out.println("*** VALIDATE SUBSEQUENCE ***");
+        System.out.println("ValidateSubsequence.isValidSubsequenceSolution1() = "
+                + ValidateSubsequence.isValidSubsequenceSolution1(new Integer[] {5, 1, 22, 25, 6, -1, 8, 10}, new Integer[] {1, 6, -1, 10}));
+        System.out.println("ValidateSubsequence.isValidSubsequenceSolution2() = "
+                + ValidateSubsequence.isValidSubsequenceSolution2(new Integer[] {5, 1, 22, 25, 6, -1, 8, 10}, new Integer[] {25}));
+    }
+
+    private static void sortedSquaredArray() {
+        System.out.println("*** SORTED SQUARED ARRAY ***");
+        System.out.println("SortedSquaredArray.getSquaredSortedArraySolution1() = "
+                + Arrays.toString(SortedSquaredArray.getSquaredSortedArraySolution1(new Integer[]{-50, -13, -2, -1, 0, 0, 1, 1, 2, 3, 19, 20})));
+        System.out.println("SortedSquaredArray.getSquaredSortedArraySolution2() = "
+                + Arrays.toString(SortedSquaredArray.getSquaredSortedArraySolution2(new Integer[]{-50, -13, -2, -1, 0, 0, 1, 1, 2, 3, 19, 20})));
     }
 }
