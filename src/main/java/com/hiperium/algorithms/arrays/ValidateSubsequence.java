@@ -7,7 +7,7 @@ package com.hiperium.algorithms.arrays;
  * array [1, 2, 3, 4], and so do the numbers [2, 4]. Note that a single number in an array and the array itself are both
  * valid subsequences of the array.
  */
-public class ValidateSubsequence {
+public final class ValidateSubsequence {
 
     private ValidateSubsequence() {}
 

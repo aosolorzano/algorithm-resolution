@@ -2,7 +2,11 @@ package com.hiperium.algorithms.arrays;
 
 import java.util.Arrays;
 
-public class SortedSquaredArray {
+/**
+ * Write a function that takes in a non-empty array of integers that are sorted in ascending order and returns a new
+ * array of the same length with the squares of the original integers also sorted in ascending order.
+ */
+public final class SortedSquaredArray {
     private SortedSquaredArray() {}
 
     // O[n*log(n)] time | O(n) space

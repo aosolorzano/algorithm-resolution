@@ -10,7 +10,6 @@ import java.util.Set;
  * order. If no two numbers sum up to the target sum, the function should return an empty array.
  */
 public final class TwoNumberSum {
-
     private TwoNumberSum() {}
 
     // O(n) time | O(n) space
