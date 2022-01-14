@@ -1,9 +1,6 @@
 package com.hiperium.algorithms.main;
 
-import com.hiperium.algorithms.arrays.SortedSquaredArray;
-import com.hiperium.algorithms.arrays.TournamentWinner;
-import com.hiperium.algorithms.arrays.TwoNumberSum;
-import com.hiperium.algorithms.arrays.ValidateSubsequence;
+import com.hiperium.algorithms.arrays.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,14 +48,15 @@ import java.util.List;
 public class MainClass {
 
     private static final String SOLUTION_2_TIME_MSG = "solution 2 time = (%d ms)%n";
-    private static long TOTAL_EXECUTION_TIME = 0L;
+    private static long totalExecutionTime = 0L;
 
     public static void main(String[] args) {
         twoNumberSum();
         validateSubsequence();
         sortedSquaredArray();
         tournamentWinner();
-        System.out.printf("total time = (%d ms)%n", TOTAL_EXECUTION_TIME);
+        nonConstructibleChange();
+        System.out.printf("total time = (%d ms)%n", totalExecutionTime);
     }
 
     private static void twoNumberSum() {
@@ -67,12 +65,12 @@ public class MainClass {
         TwoNumberSum.solution2(new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9}, 19);
         long finishS2 = System.currentTimeMillis() - startS2;
         System.out.printf(SOLUTION_2_TIME_MSG, finishS2);
-        TOTAL_EXECUTION_TIME += finishS2;
+        totalExecutionTime += finishS2;
         long startS3 = System.currentTimeMillis();
         TwoNumberSum.solution3(new Integer[]{3, 5, -4, 8, 11, 1, -1, 6}, 10);
         long finishS3 = System.currentTimeMillis() - startS3;
         System.out.printf("solution 3 time = (%d ms)%n", finishS3);
-        TOTAL_EXECUTION_TIME += finishS3;
+        totalExecutionTime += finishS3;
     }
 
     private static void validateSubsequence() {
@@ -81,12 +79,12 @@ public class MainClass {
         ValidateSubsequence.isValidSubsequenceSolution1(new Integer[]{5, 1, 22, 25, 6, -1, 8, 10}, new Integer[]{1, 6, -1, 10});
         long finishS1 = System.currentTimeMillis() - startS1;
         System.out.printf("solution 1 time = (%d ms)%n", finishS1);
-        TOTAL_EXECUTION_TIME += finishS1;
+        totalExecutionTime += finishS1;
         long startS2 = System.currentTimeMillis();
         ValidateSubsequence.isValidSubsequenceSolution2(new Integer[]{5, 1, 22, 25, 6, -1, 8, 10}, new Integer[]{25});
         long finishS2 = System.currentTimeMillis() - startS2;
         System.out.printf(SOLUTION_2_TIME_MSG, finishS2);
-        TOTAL_EXECUTION_TIME += finishS2;
+        totalExecutionTime += finishS2;
     }
 
     private static void sortedSquaredArray() {
@@ -95,12 +93,12 @@ public class MainClass {
         SortedSquaredArray.getSquaredSortedArraySolution1(new Integer[]{-50, -13, -2, -1, 0, 0, 1, 1, 2, 3, 19, 20});
         long finishS1 = System.currentTimeMillis() - startS1;
         System.out.printf("solution 1 time = (%d ms)%n", finishS1);
-        TOTAL_EXECUTION_TIME += finishS1;
+        totalExecutionTime += finishS1;
         long startS2 = System.currentTimeMillis();
         SortedSquaredArray.getSquaredSortedArraySolution2(new Integer[]{-50, -13, -2, -1, 0, 0, 1, 1, 2, 3, 19, 20});
         long finishS2 = System.currentTimeMillis() - startS2;
         System.out.printf(SOLUTION_2_TIME_MSG, finishS2);
-        TOTAL_EXECUTION_TIME += finishS2;
+        totalExecutionTime += finishS2;
     }
 
     private static void tournamentWinner() {
@@ -116,6 +114,15 @@ public class MainClass {
         TournamentWinner.getWinner(competitions, new Integer[]{0, 0, 1});
         long finish = System.currentTimeMillis() - start;
         System.out.printf("solution time = (%d ms)%n", finish);
-        TOTAL_EXECUTION_TIME += finish;
+        totalExecutionTime += finish;
+    }
+
+    private static void nonConstructibleChange() {
+        System.out.println("*** NON-CONSTRUCTIBLE CHANGE ***");
+        long start = System.currentTimeMillis();
+        NonConstructibleChange.getNonConstructibleChange(new Integer[]{109, 2000, 8765, 19, 18, 17, 16, 8, 1, 1, 2, 4});
+        long finish = System.currentTimeMillis() - start;
+        System.out.printf("solution time = (%d ms)%n", finish);
+        totalExecutionTime += finish;
     }
 }

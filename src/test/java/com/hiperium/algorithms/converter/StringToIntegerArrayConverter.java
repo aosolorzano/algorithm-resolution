@@ -3,14 +3,19 @@ package com.hiperium.algorithms.converter;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.TypedArgumentConverter;
 
+import java.util.Arrays;
+
 public class StringToIntegerArrayConverter extends TypedArgumentConverter<String, Integer[]> {
 
+    private static final String EMPTY_ARRAY_STRING = "[]";
     protected StringToIntegerArrayConverter() {
         super(String.class, Integer[].class);
     }
 
     @Override
     protected Integer[] convert(String array) throws ArgumentConversionException {
+        if (EMPTY_ARRAY_STRING.equals(array))
+            return new Integer[0];
         String[] items = array
                 .replaceAll("\\[", "")
                 .replaceAll("]", "")
