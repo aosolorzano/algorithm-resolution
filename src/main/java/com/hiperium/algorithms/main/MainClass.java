@@ -56,6 +56,7 @@ public class MainClass {
         sortedSquaredArray();
         tournamentWinner();
         nonConstructibleChange();
+        threeNumberSum();
         System.out.printf("total time = (%d ms)%n", totalExecutionTime);
     }
 
@@ -121,6 +122,15 @@ public class MainClass {
         System.out.println("*** NON-CONSTRUCTIBLE CHANGE ***");
         long start = System.currentTimeMillis();
         NonConstructibleChange.getNonConstructibleChange(new Integer[]{109, 2000, 8765, 19, 18, 17, 16, 8, 1, 1, 2, 4});
+        long finish = System.currentTimeMillis() - start;
+        System.out.printf("solution time = (%d ms)%n", finish);
+        totalExecutionTime += finish;
+    }
+
+    private static void threeNumberSum() {
+        System.out.println("*** THREE NUMBER SUM ***");
+        long start = System.currentTimeMillis();
+        ThreeNumberSum.getThreeNumSum(new Integer[]{12, 3, 1, 2, -6, 5, 0, -8, -1, 6, -5}, 0);
         long finish = System.currentTimeMillis() - start;
         System.out.printf("solution time = (%d ms)%n", finish);
         totalExecutionTime += finish;

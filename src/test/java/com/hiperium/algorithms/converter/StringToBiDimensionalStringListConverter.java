@@ -6,9 +6,9 @@ import org.junit.jupiter.params.converter.TypedArgumentConverter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringToBiDimensionalListConverter extends TypedArgumentConverter<String, List> {
+public class StringToBiDimensionalStringListConverter extends TypedArgumentConverter<String, List> {
 
-    protected StringToBiDimensionalListConverter() {
+    protected StringToBiDimensionalStringListConverter() {
         super(String.class, List.class);
     }
 
